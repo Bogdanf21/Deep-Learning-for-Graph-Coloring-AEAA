@@ -122,7 +122,6 @@ def evaluate_model(model, test_loader, writer):
 
 
 def visualize_embeddings(embeddings, labels, writer):
-    """Visualizes embeddings using t-SNE."""
     tsne = TSNE(n_components=2, random_state=42)
     embeddings_2d = tsne.fit_transform(embeddings)
     plt.figure(figsize=(8, 6))
